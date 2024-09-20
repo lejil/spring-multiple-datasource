@@ -1,4 +1,5 @@
-spring-multiple-datasource
+#   springboot-jpa-multiple-datasources
+  
 Spring Boot Multiple Datasource  demo is demonstrating how to implement simple CRUD operations with a Employee entity on two different data sources 
 
 What's inside
