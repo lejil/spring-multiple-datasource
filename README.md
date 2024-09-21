@@ -1,31 +1,38 @@
-#   springboot-jpa-multiple-datasources
-  
-Spring Boot Multiple Datasource  demo is demonstrating how to implement simple CRUD operations with a Employee entity on two different data sources 
+# Spring Boot JPA with Multiple DataSources: MySQL and PostgreSQL
+* This project demonstrates how to configure and use multiple data sources in a Spring Boot application with JPA, connecting to both MySQL and PostgreSQL databases.
 
-What's inside
-This project is based on the Spring Boot project and uses these packages :
+# Features
+* Spring Boot 3.x with Spring Data JPA for ORM.
+* Integration with two different relational databases:
+* MySQL for managing one set of entities.
+* PostgreSQL for managing another set of entities.
+* Multiple datasource configuration using properties, DataSourceBuilder, and LocalContainerEntityManagerFactoryBean.
+* Separate transaction management for each datasource.
+* Practical example of using repositories to interact with each datasource independently.
 
-Maven
-Spring Core
-Spring Data (Hibernate & MySQL)
-Spring MVC (Tomcat)
+# Project Structure
+* Primary DataSource (MySQL): Handles employee data.
+* Secondary DataSource (PostgreSQL): Manages employee data.
 
+# Configuration classes for:
+* Data source beans
+* Entity managers
+* Transaction managers
+* JPA repositories and entity classes mapped to the respective databases.
 
-Installation
-The project is created with Maven, so you just need to import it to your IDE and build the project to resolve the dependencies
+# How to Run
+* Set up both MySQL and PostgreSQL databases on your local or remote server.
+* Update the connection details in the application.properties or application.yml file:
+* MySQL connection settings.
+* PostgreSQL connection settings.
+* Run the Spring Boot application.
 
-Database configuration
-Create a MySQL database with the name db1 and add the credentials to /resources/application.properties.
-The default ones are :
+# Dependencies
+* Spring Boot 3.x
+* Spring Data JPA
+* MySQL Connector
+* PostgreSQL JDBC Driver
+* HikariCP (for connection pooling)
 
-spring.datasource.url=jdbc:mysql://localhost:3306/db1
-spring.datasource.username=root
-spring.datasource.password=
-
-
-Create a PostgreSQL database with the name db2 and add the credentials to /resources/application.properties.
-The default ones are :
-
-spring.datasource.url=jdbc:postgresql://localhost:5432/db2
-spring.datasource.username=postgres
-spring.datasource.password=
+# Use Case
+* This setup is ideal when you need to interact with multiple databases within the same application, whether due to architectural design, legacy systems, or specific storage requirements.
