@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.multi.db</groupId>
 	<artifactId>spring-multiple-datasource</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>spring-multiple-datasource</name>
 	<description>Spring Security Service</description>
 	<url />
